@@ -1,0 +1,35 @@
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary static-top">
+<div class="container">
+    <a class="navbar-brand" href="/">Agenda</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    {% if not user.is_authenticated %}
+        {% if 'login' not in request.path %}
+            <a class="navbar-brand" href="{% url 'login' %}">Login</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        {% endif %}
+
+    {% elif user.is_authenticated %}
+        {% if 'dashboard' not in request.path %}
+            <a class="navbar-brand" href="{% url 'dashboard' %}">Adicionar contato</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        {% elif 'dashboard' in request.path %}
+            <a class="navbar-brand" href="{% url 'logout' %}">Logout</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        {% endif %}
+    {% endif %}
+    
+
+    </button>
+</div>
+</nav>
