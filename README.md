@@ -60,6 +60,7 @@ $ cd contact-list
 ```
 $ pip install -r requirements.txt
 
+```
 
 ## Contributing
 
@@ -67,7 +68,8 @@ You can send how many PR's do you want, I'll be glad to analyse and accept them!
 
 Email-me: tiagooliveiravidaldepaula@gmail.com
 
-Connect with me at [LinkedIn](https://www.linkedin.com/in/tiagovidaldepaula/) or [Twitter](https://twitter.com/tiagod3p)
+Connect with me at [LinkedIn](https://www.linkedin.com/in/tiagovidaldepaula/)
+or [Twitter](https://twitter.com/tiagod3p)
 
 Thank you!
 
